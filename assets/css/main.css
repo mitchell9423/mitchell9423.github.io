@@ -1911,7 +1911,7 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		background: #000080;
+		background: #AFEEEE;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 		text-align: center;
 		padding: 2em;
@@ -1935,6 +1935,10 @@ input, select, textarea {
 			top: 2em;
 			margin: -4em 0 4em -4em;
 			width: auto;
+		}
+		
+		.box p {
+			color: #000080;
 		}
 
 /* Icons */
@@ -1974,7 +1978,7 @@ input, select, textarea {
 		}
 
 		.icon.featured {
-			color: #EA8A95;
+			color: #000080;
 			display: block;
 			margin: 0 0 1.5em 0;
 			cursor: default;
