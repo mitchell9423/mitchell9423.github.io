@@ -1911,8 +1911,8 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		background: #AFEEEE;
-		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+		background: #3da4cd; /*#AFEEEE;*/
+		box-shadow: inset 0px 0px 0px px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 		text-align: center;
 		padding: 2em;
 	}
@@ -1937,8 +1937,16 @@ input, select, textarea {
 			width: auto;
 		}
 		
+		.box h3 {
+			text-shadow: 1px 1px 0px #000000;
+			color: #fff;
+		}
+		
 		.box p {
-			color: #000080;
+			color: #5f6466;
+			text-shadow: .6px .6px 0px #000000;
+			font-family: 'Font Awesome 5 Brands';
+			font-size: 1.0em;
 		}
 
 /* Icons */
@@ -2003,12 +2011,12 @@ input, select, textarea {
 		}
 
 		.wrapper.style2 {
-			background-color: #fafafa;
-			text-shadow: 1px 1px 0px #fff;
+			background-color: #000000;
+			text-shadow: .3px .3px 0px #fff;
 		}
 
 		.wrapper.style3 {
-			background-color: #f4f4f4;
+			background-color: #000000;
 			text-shadow: 1px 1px 0px #fff;
 		}
 
