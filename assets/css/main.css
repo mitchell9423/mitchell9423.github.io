@@ -1943,8 +1943,9 @@ input, select, textarea {
 		}
 		
 		.box p {
-			color: #5f6466;
-			text-shadow: .6px .6px 0px #000000;
+			color: #000000; /*#5f6466;*/
+			text-shadow: none;
+			/*text-shadow: .6px .6px 0px #000000;*/
 			font-family: 'Font Awesome 5 Brands';
 			font-size: 1.0em;
 		}
@@ -2012,7 +2013,7 @@ input, select, textarea {
 
 		.wrapper.style2 {
 			background-color: #000000;
-			text-shadow: .3px .3px 0px #fff;
+			text-shadow: 0px 0px 0px #0000;
 		}
 
 		.wrapper.style3 {
