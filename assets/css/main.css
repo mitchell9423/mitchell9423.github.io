@@ -98,9 +98,15 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
+		background-image: url("../../images/background1.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-color: transparent;
 		font-family: 'Open Sans', sans-serif;
 		line-height: 1.85em;
-		color: #888;
+		color: rgba(0,0,0,0);
 		font-weight: 300;
 		font-size: 13pt;
 	}
@@ -150,7 +156,8 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #3e3e3e;
+		text-shadow: 1px 1px 0px #000000;
+		font-family: 'Montserrat';
 		margin: 0 0 0.75em 0;
 	}
 
@@ -164,8 +171,9 @@ input, select, textarea {
 	}
 
 	h1 {
-		font-size: 3.25em;
-		letter-spacing: -0.025em;
+		color: #FFFFFF;
+		font-size: 3em;
+		letter-spacing: 1px;
 		font-weight: 300;
 	}
 
@@ -174,13 +182,17 @@ input, select, textarea {
 		}
 
 	h2 {
-		font-size: 2em;
+		font-size: 2.5em;
 		letter-spacing: -0.015em;
 	}
 
 	h3 {
 		font-size: 1.5em;
 		letter-spacing: -0.015em;
+	}
+
+	.secondary-text {
+		color: #CCCCCC;
 	}
 
 	em, i {
@@ -203,6 +215,11 @@ input, select, textarea {
 	p, ul, ol, dl, table {
 		margin-bottom: 2em;
 	}
+	
+	p {
+		font-size: 1em;
+		line-height: 1.6;
+	}
 
 	header {
 		margin: 0 0 3em 0;
@@ -220,6 +237,7 @@ input, select, textarea {
 		footer > p {
 			font-size: 1.25em;
 		}
+		
 
 /* Container */
 
@@ -232,33 +250,43 @@ input, select, textarea {
 		.container.medium {
 			width: 900px;
 		}
+		
+		@media screen and (max-width: 3840px) {
+			
+			.container {
+				width: 1,680px;
+			}
 
+				.container.medium {
+					width: 1,293px;
+				}
+		}
+		
 		@media screen and (max-width: 1680px) {
-
+			
 			.container {
 				width: 1200px;
 			}
 
 				.container.medium {
-					width: 900px;
+					width: 960px;
 				}
-
 		}
 
 		@media screen and (max-width: 1280px) {
-
+			
 			.container {
 				width: 960px;
 			}
 
 				.container.medium {
-					width: 720px;
+					width: 739px;
 				}
 
 		}
 
 		@media screen and (max-width: 980px) {
-
+			
 			.container {
 				width: 100%;
 			}
@@ -270,7 +298,7 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
-
+			
 			.container {
 				width: 100%;
 				max-width: calc(100% - 30px);
@@ -282,15 +310,27 @@ input, select, textarea {
 
 		}
 
+
 /* Row */
 
 	.row {
 		display: flex;
 		flex-wrap: wrap;
-		box-sizing: border-box;
 		align-items: stretch;
+		position: relative;
 	}
-
+/*
+	.row::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: var(--dynamic-width, --default-width);
+		right: var(--dynamic-width, --default-width);
+		bottom: 0;
+		background-color: transparent;
+		z-index: -1;
+	}
+*/
 		.row > * {
 			box-sizing: border-box;
 		}
@@ -369,6 +409,7 @@ input, select, textarea {
 
 		.row > .col-6 {
 			width: 50%;
+			justify-content: center;
 		}
 
 		.row > .off-6 {
@@ -1026,6 +1067,7 @@ input, select, textarea {
 
 				.row > * {
 					box-sizing: border-box;
+		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 				}
 
 				.row.gtr-uniform > * > :last-child {
@@ -1610,6 +1652,7 @@ input, select, textarea {
 /* Section/Article */
 
 	section, article {
+    background-color: #2E4057;
 		margin-bottom: 3em;
 	}
 
@@ -1669,14 +1712,14 @@ input, select, textarea {
 		background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 		background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 		background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		-moz-transition: background-color .2s ease-in-out;
-		-webkit-transition: background-color .2s ease-in-out;
-		-ms-transition: background-color .2s ease-in-out;
-		transition: background-color .2s ease-in-out;
+		-moz-transition: background-color 0.3s ease;
+		-webkit-transition: background-color 0.3s ease;
+		-ms-transition: background-color 0.3s ease;
+		transition: background-color 0.3s ease;
 		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
-		color: #fff !important;
+		color: #F0F0F0 !important; /*#fff*/
 		text-decoration: none;
 		font-weight: 700;
 		border: 0;
@@ -1686,10 +1729,11 @@ input, select, textarea {
 		text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
 		overflow: hidden;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
-		background-color: #43B3E0;
-		padding: 1em 2.35em 1em 2.35em;
+		background-color: #E94560;
+		padding: 1em 2em;
 		font-size: 1.1em;
 		max-width: 24em;
+		margin-top: 140px;
 	}
 
 		input[type="button"]:hover,
@@ -1697,8 +1741,8 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #43bff0;
-			color: #fff !important;
+    background-color: #D8345F;
+			color: #DDDDDD !important; /*#fff*/
 		}
 
 		input[type="button"]:active,
@@ -1911,10 +1955,11 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		background: #3da4cd; /*#AFEEEE;*/
+		background: #333333; /*#3da4cd;*/
 		box-shadow: inset 0px 0px 0px px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 		text-align: center;
 		padding: 2em;
+		border: 1px solid #624572; /* Slightly lighter purple border */
 	}
 
 		.box.style1 {
@@ -1938,12 +1983,11 @@ input, select, textarea {
 		}
 		
 		.box h3 {
-			text-shadow: 1px 1px 0px #000000;
-			color: #fff;
+			color: #E0E0E0;
 		}
 		
 		.box p {
-			color: #000000; /*#5f6466;*/
+			color: #E0E0E0; /*#5f6466;*/
 			text-shadow: none;
 			/*text-shadow: .6px .6px 0px #000000;*/
 			font-family: 'Font Awesome 5 Brands';
@@ -1987,7 +2031,7 @@ input, select, textarea {
 		}
 
 		.icon.featured {
-			color: #000080;
+			color: #CCCCCC;
 			display: block;
 			margin: 0 0 1.5em 0;
 			cursor: default;
@@ -1997,32 +2041,102 @@ input, select, textarea {
 				font-size: 6em;
 			}
 
+
 /* Wrappers */
 
+	.blureffect {
+		background-image: url("../../images/background1.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-color: transparent;
+		position: relative;
+		z-index: 1;
+	}
+	
+	.blureffect::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: var(--dynamic-width, --default-width);  /* Default to 0 if not set */
+		right: var(--dynamic-width, --default-width); /* Default to 0 if not set */
+		background-color: rgba(0, 0, 0, 0);
+		height: 110%;
+		backdrop-filter: blur(var(--dynamic-blur, --default-blur));
+		-webkit-backdrop-filter: blur(var(--dynamic-blur, --default-blur));
+		z-index: -1;
+	}
+	
 	.wrapper {
-		background-image: url("images/bg.png");
-		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+		background-color: transparent;
+		color: #E0FFFF;
 		padding: 8em 0 8em 0;
 		text-align: center;
+		position: relative;
+		z-index: 1;
 	}
 
+	/* .wrapper::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0);
+		backdrop-filter: blur(30px);
+		-webkit-backdrop-filter: blur(10px);
+		z-index: -1;
+	} */
+
 		.wrapper.style1 {
-			background-image: none;
-			background-color: #fff;
+			padding-left: 100px;
 		}
 
-		.wrapper.style2 {
-			background-color: #000000;
-			text-shadow: 0px 0px 0px #0000;
+		/* SkyGods Specific Styling */
+		.wrapper.style1 h1, .wrapper.style1 h2 {
+			color: #E0FFFF;
+		}
+		
+		.wrapper.style1 strong {
+			color: #E0FFFF;
+		}
+		
+		.features-list {
+			list-style: none;
+			padding-left: 0;
+		}
+
+		.features-list li {
+			font-size: 1.2rem;
+			margin: 10px 0;
+		}
+
+		.wrapper.style2 h1, .wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 p, .wrapper.style2 ul li {
+			line-height: 1.8; /* Increase line-height to improve readability */
+		}
+
+		.wrapper.style2 p, .wrapper.style2 ul li {
+			color: #DDDDDD; /* Lighten the regular text to give contrast */
+		}
+		
+		.wrapper.style2 strong {
+			color: #FFD700; /* Change color to gold to stand out */
+			font-weight: 900; /* Make it bolder */
+			font-family: 'Montserrat', sans-serif; /* Use a distinct, modern font */
+			text-transform: uppercase; /* Capitalize the text to make it stand out more */
 		}
 
 		.wrapper.style3 {
-			background-color: #000000;
-			text-shadow: 1px 1px 0px #fff;
+		}
+
+		.wrapper.style3 h1, .wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 p, .wrapper.style3 ul li {
+			line-height: 1.8; /* Increase line-height to improve readability */
 		}
 
 		.wrapper.style4 {
-			background-color: #303030;
 			color: #999;
 			text-shadow: -1px -1px 0px #181818;
 		}
@@ -2049,7 +2163,7 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		background-color: #282828;
+		background-color: #16213E /*#282828*/;
 		text-align: center;
 		position: fixed;
 		left: 0;
@@ -2092,7 +2206,7 @@ input, select, textarea {
 
 			#nav a:hover {
 				color: #fff !important;
-				background: #383838;
+				background: #E94560;
 			}
 
 			#nav a.active {
@@ -2119,7 +2233,7 @@ input, select, textarea {
 
 	#top {
 		padding: 10em 0 10em 0;
-		text-align: left;
+		text-align: center;
 	}
 
 		#top .image {
