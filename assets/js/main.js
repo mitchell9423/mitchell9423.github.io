@@ -35,16 +35,15 @@
 
 
 function updateBlur() {
-
-	console.log(document.querySelectorAll('.blureffect')); // Check if the element exists
-	console.log(document.querySelectorAll('.row')); // Check if the element exists
+    let blurElement = document.querySelector('.blureffect');
 
 	// Get the current zoom level
 	let zoomLevel = window.devicePixelRatio || 1;
 	
 	let defaultwidth = 20;
 	
-	let defaultblur = 11;
+	let defaultblur = blurElement ? parseFloat(blurElement.getAttribute('data-defaultblur')) : 11;
+	let alpha = blurElement ? parseFloat(blurElement.getAttribute('data-alpha')) : 0;
 	
 	// Calculate the blur amount based on zoom (you can adjust this factor)
 	let blurAmount = defaultblur / zoomLevel;
@@ -62,6 +61,7 @@ function updateBlur() {
 	*/
 	
 	document.querySelectorAll('.blureffect').forEach(element => {
+		element.style.setProperty('--alpha', `${alpha}`);
 		element.style.setProperty('--default-width', `${defaultwidth}%`);
 		element.style.setProperty('--default-blur', `${defaultblur}px`);
 		element.style.setProperty('--dynamic-width', `${widthAmount}%`);

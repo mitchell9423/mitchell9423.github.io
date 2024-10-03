@@ -174,7 +174,7 @@ input, select, textarea {
 		color: #FFFFFF;
 		font-size: 3em;
 		letter-spacing: 1px;
-		font-weight: 300;
+		font-weight: 800;
 	}
 
 		h1 strong {
@@ -244,7 +244,7 @@ input, select, textarea {
 	.container {
 		margin: 0 auto;
 		max-width: calc(100% - 50px);
-		width: 1200px;
+		width: 1400px;
 	}
 
 		.container.medium {
@@ -319,17 +319,6 @@ input, select, textarea {
 		align-items: stretch;
 		position: relative;
 	}
-/*
-	.row::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: var(--dynamic-width, --default-width);
-		right: var(--dynamic-width, --default-width);
-		bottom: 0;
-		background-color: transparent;
-		z-index: -1;
-	}
 */
 		.row > * {
 			box-sizing: border-box;
@@ -341,10 +330,30 @@ input, select, textarea {
 
 		.row.aln-left {
 			justify-content: flex-start;
+			text-align: left;
 		}
 
 		.row.aln-center {
 			justify-content: center;
+		}
+
+		.row.center-left {
+			justify-content: center;
+			text-align: left;
+		}
+
+		.row.center-middle {
+			justify-content: center;
+			text-align: center;
+		}
+		
+		.row.center-middle > .col-6:first-child {
+			text-align: right; /* Ensures the image aligns properly to the right */
+			/* margin-right: 20px; /* Add some space between the button and image */ */
+		}
+
+		.row.center-middle > .col-6:last-child {
+			text-align: left; /* Ensures the image aligns properly to the right */
 		}
 
 		.row.aln-right {
@@ -356,6 +365,7 @@ input, select, textarea {
 		}
 
 		.row.aln-middle {
+			justify-content: center;
 			align-items: center;
 		}
 
@@ -409,12 +419,11 @@ input, select, textarea {
 
 		.row > .col-6 {
 			width: 50%;
-			justify-content: center;
 		}
 
 		.row > .off-6 {
 			margin-left: 50%;
-		}
+		}		
 
 		.row > .col-7 {
 			width: 58.33333%;
@@ -589,6 +598,25 @@ input, select, textarea {
 
 				.row.aln-center {
 					justify-content: center;
+				}
+
+				.row.center-left {
+					justify-content: center;
+					text-align: left;
+				}
+
+				.row.center-middle {
+					justify-content: center;
+					text-align: center;
+				}
+		
+				.row.center-middle > .col-6-xlarge:first-child {
+					text-align: right; /* Ensures the image aligns properly to the right */
+					/* margin-right: 20px; /* Add some space between the button and image */ */
+				}
+
+				.row.center-middle > .col-6-xlarge:last-child {
+					text-align: left; /* Ensures the image aligns properly to the right */
 				}
 
 				.row.aln-right {
@@ -836,6 +864,25 @@ input, select, textarea {
 					justify-content: center;
 				}
 
+				.row.center-left {
+					justify-content: center;
+					text-align: left;
+				}
+
+				.row.center-middle {
+					justify-content: center;
+					text-align: center;
+				}
+		
+				.row.center-middle > .col-6-large:first-child {
+					text-align: right; /* Ensures the image aligns properly to the right */
+					/* margin-right: 20px; /* Add some space between the button and image */ */
+				}
+
+				.row.center-middle > .col-6-large:last-child {
+					text-align: left; /* Ensures the image aligns properly to the right */
+				}
+
 				.row.aln-right {
 					justify-content: flex-end;
 				}
@@ -1067,7 +1114,7 @@ input, select, textarea {
 
 				.row > * {
 					box-sizing: border-box;
-		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+		/* box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1); */
 				}
 
 				.row.gtr-uniform > * > :last-child {
@@ -1080,6 +1127,25 @@ input, select, textarea {
 
 				.row.aln-center {
 					justify-content: center;
+				}
+
+				.row.center-left {
+					justify-content: center;
+					text-align: left;
+				}
+
+				.row.center-middle {
+					justify-content: center;
+					text-align: center;
+				}
+		
+				.row.center-middle > .col-6-medium:first-child {
+					text-align: right; /* Ensures the image aligns properly to the right */
+					/* margin-right: 20px; /* Add some space between the button and image */ */
+				}
+
+				.row.center-middle > .col-6-medium:last-child {
+					text-align: left; /* Ensures the image aligns properly to the right */
 				}
 
 				.row.aln-right {
@@ -1325,6 +1391,39 @@ input, select, textarea {
 
 				.row.aln-center {
 					justify-content: center;
+				}
+
+				.row.center-left {
+					justify-content: center;
+					text-align: left;
+				}
+
+				.row.center-middle {
+					justify-content: center;
+					text-align: center;
+				}
+				
+				iframe {
+					max-width: 100%;
+					width: 560;
+					height: 315; /* Maintain aspect ratio */
+					}
+				
+				.row.center-middle.col-12-small > iframe {
+					max-width: 100%;
+					width: 400px;
+					height: auto; /* Maintain aspect ratio */
+					}
+				
+				.row.center-middle.col-12-small > :first-child,
+				.row.center-middle.col-12-small:first-child {
+					text-align: right; /* Ensures the image aligns properly to the right */
+					margin-right: 20px; /* Add some space between the button and image */
+				}
+
+				.row.center-middle > .col-12-small:last-child {
+					text-align: left; /* Ensures the image aligns properly to the right */
+					margin-left: 20px; /* Add some space between the button and image */
 				}
 
 				.row.aln-right {
@@ -1652,15 +1751,25 @@ input, select, textarea {
 /* Section/Article */
 
 	section, article {
-    background-color: #2E4057;
-		margin-bottom: 3em;
+		background-color: #2E4057;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	section > :first-child,
+	article > :first-child,
+	section:first-child,
+	article:first-child {
+		padding-top: 5em;
+		margin-top: 0em;
 	}
 
 	section > :last-child,
 	article > :last-child,
 	section:last-child,
 	article:last-child {
-		margin-bottom: 0;
+		padding-bottom: 5em;
+		margin-bottom: 0em;
 	}
 
 /* Image */
@@ -1700,6 +1809,21 @@ input, select, textarea {
 				margin: 0 auto;
 				width: auto;
 			}
+			
+		.image.crop {
+			border-radius: 100%;
+			margin: 0;
+		}
+
+			.image.crop img {
+				border-radius: 100%;
+			}
+			
+/* Default iframe size (for larger screens) */
+	.responsive-video {
+		width: 560px; /* col-6 default size */
+		height: calc(560px * 9 / 16); /* Maintain 16:9 aspect ratio */
+		}
 
 /* Button */
 
@@ -2062,7 +2186,7 @@ input, select, textarea {
 		bottom: 0;
 		left: var(--dynamic-width, --default-width);  /* Default to 0 if not set */
 		right: var(--dynamic-width, --default-width); /* Default to 0 if not set */
-		background-color: rgba(0, 0, 0, 0);
+		background-color: rgba(0, 0, 0, var(--alpha, 0));
 		height: 110%;
 		backdrop-filter: blur(var(--dynamic-blur, --default-blur));
 		-webkit-backdrop-filter: blur(var(--dynamic-blur, --default-blur));
@@ -2072,27 +2196,14 @@ input, select, textarea {
 	.wrapper {
 		background-color: transparent;
 		color: #E0FFFF;
-		padding: 8em 0 8em 0;
+		padding: 1em 0 1em 0;
 		text-align: center;
 		position: relative;
 		z-index: 1;
 	}
 
-	/* .wrapper::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: rgba(0, 0, 0, 0);
-		backdrop-filter: blur(30px);
-		-webkit-backdrop-filter: blur(10px);
-		z-index: -1;
-	} */
-
 		.wrapper.style1 {
-			padding-left: 100px;
+			/* padding-left: 100px; */
 		}
 
 		/* SkyGods Specific Styling */
@@ -2113,6 +2224,11 @@ input, select, textarea {
 			font-size: 1.2rem;
 			margin: 10px 0;
 		}
+		
+		.bullet-points li {
+		  text-indent: -20px;
+		  padding-left: 20px;
+		}
 
 		.wrapper.style2 h1, .wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 p, .wrapper.style2 ul li {
 			line-height: 1.8; /* Increase line-height to improve readability */
@@ -2128,10 +2244,20 @@ input, select, textarea {
 			font-family: 'Montserrat', sans-serif; /* Use a distinct, modern font */
 			text-transform: uppercase; /* Capitalize the text to make it stand out more */
 		}
-
-		.wrapper.style3 {
+		
+		.wrapper.style2.left strong, .wrapper.style2.left p, .wrapper.style2.left ul li{
+			text-align: left;
 		}
-
+		
+		.wrapper.skygods {
+			padding: 4em 0 8em 0;
+			font-size: 1.1em;
+		}
+		
+		.wrapper.style2.skygods p, .wrapper.style2.skygods ul, .wrapper.style2.skygods ul li {
+			font-family: 'Helvetica', sans-serif;
+		}
+		
 		.wrapper.style3 h1, .wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 p, .wrapper.style3 ul li {
 			line-height: 1.8; /* Increase line-height to improve readability */
 		}
@@ -2163,7 +2289,7 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		background-color: #16213E /*#282828*/;
+		background-color: #16213E;
 		text-align: center;
 		position: fixed;
 		left: 0;
@@ -2228,11 +2354,12 @@ input, select, textarea {
 /* Articles */
 
 	body > article {
-		margin-bottom: 0;
+		margin-top: 1em;
+		margin-bottom: 1em;
 	}
 
 	#top {
-		padding: 10em 0 10em 0;
+		/* padding: 10em 0 10em 0; */
 		text-align: center;
 	}
 
@@ -2553,7 +2680,15 @@ input, select, textarea {
 		/* Copyright */
 
 			#copyright {
-				font-size: 1em;
+				text-align: center;
+				padding: 20px;
+				background-color: #333; /* Adjust color */
+				color: white;
+				font-size: 14px;
+				position: fixed;
+				width: 100%;
+				bottom: 0;
+				/* font-size: 1em; */
 				margin: 0;
 			}
 
@@ -2568,5 +2703,11 @@ input, select, textarea {
 					#copyright li:first-child {
 						margin-top: 0;
 					}
-
+					
+		/* Adjust size for smaller columns */
+		
+			.responsive-video {
+				width: 400px; /* col-12-small */
+				height: calc(400px * 9 / 16); /* Maintain 16:9 aspect ratio */
+			}
 	}
