@@ -318,9 +318,9 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 796px) {
-				
+
 			.container.large {
-				max-width: 400px;
+				max-width: 554px;
 			}
 		}
 
