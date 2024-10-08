@@ -13,7 +13,8 @@ const scripts = [
     "assets/js/browser.min.js",
     "assets/js/breakpoints.min.js",
     "assets/js/util.js",
-    "assets/js/main.js"
+    "assets/js/main.js",
+    "assets/webfonts/fontawesome-free-6.6.0-web/css/all.css"
 ];
 
 // Start loading the scripts

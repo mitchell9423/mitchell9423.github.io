@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Segai - Segai Production</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class="is-preload">
+
+	<!-- Navigation -->
+	<nav id="nav">
+		<ul class="container">
+			<li><a href="index.html#top">Home</a></li>
+			<li><a href="index.html#portfolio">Portfolio</a></li>
+			<li><a href="index.html#contact">Contact</a></li>
+		</ul>
+	</nav>
+
+	<div class="blureffect" data-defaultblur="60" data-alpha=".4">
+
+		<!-- Overview Section -->
+		<article id="overview" class="wrapper style1">
+			<div class="container" style="z-index: 2;">
+				<header>
+					<h1>Faded - Segai Productions</h1>
+				</header>
+				<div class="row aln-center">
+					<div class="col-12 col-12-small col-12-medium col-12-large col-12-xlarge">
+						<iframe class="responsive-video" src="video/Combat_Previs_Tagged_09.mp4" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+				<header>
+					<h2>Project Overview:</h2>
+				</header>
+				<div class="row center-left">
+					<div class="col-9 col-10-small col-10-medium col-11-large col-11-xlarge">
+						<p>As a <strong>Platform Engineer</strong> and <strong>Gameplay Programmer</strong> at <strong><a href="https://tempogames.com/">Tempo Games</a></strong>, I played a pivotal role in the development of <strong><a href="https://playthebazaar.com/">The Bazaar</a></strong>, an innovative online multiplayer card game. My responsibilities spanned platform engineering and gameplay programming, ensuring both the backend systems and game mechanics provided a seamless and immersive player experience.</p>
+					</div>
+				</div>
+			</div>
+		</article>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/scriptloader.js"></script>
+	<script>
+		const img = document.getElementById('previsgiphy-gif');
+
+		img.addEventListener('mouseover', function () {
+			img.src = 'images/previsgiphy.gif';  // Switch to GIF on hover
+		});
+
+		img.addEventListener('mouseout', function () {
+			img.src = 'images/previsgiphy.jpg';  // Switch back to static image when hover ends
+		});
+	</script>
+</body>
+</html>

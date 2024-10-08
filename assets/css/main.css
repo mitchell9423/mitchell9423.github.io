@@ -122,6 +122,7 @@ input, select, textarea {
 
 		a:hover {
 			color: #43bff0 !important;
+			transition: color 0.3s ease;
 		}
 
 		a img {
@@ -155,11 +156,11 @@ input, select, textarea {
 		font-style: italic;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
-		text-shadow: 1px 1px 0px #000000;
-		font-family: 'Montserrat';
-		margin: 0 0 0.75em 0;
-	}
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 1px 1px 0px #000000;
+	font-family: 'Montserrat';
+	margin: 2em 0 0.75em 0;
+}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 		text-decoration: none;
@@ -1752,13 +1753,19 @@ input, select, textarea {
 
 	section, article {
 		background-color: #2E4057;
-		margin-top: 1em;
-		margin-bottom: 1em;
 	}
 
-	section > :first-child,
+article {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+section {
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+
 	article > :first-child,
-	section:first-child,
 	article:first-child {
 		padding-top: 5em;
 		margin-top: 0em;
@@ -1777,12 +1784,18 @@ input, select, textarea {
 	.image {
 		display: inline-block;
 		position: relative;
+		background-color: transparent;
 	}
 
 		.image img {
 			display: block;
 			width: 100%;
+			transition: transform 0.4s ease;
 		}
+
+			.image img:hover {
+				transform: scale(1.05); /* Slight zoom on hover */
+			}
 
 		.image.fit {
 			display: block;
@@ -2078,13 +2091,13 @@ input, select, textarea {
 
 /* Box */
 
-	.box {
-		background: #333333; /*#3da4cd;*/
-		box-shadow: inset 0px 0px 0px px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
-		text-align: center;
-		padding: 2em;
-		border: 1px solid #624572; /* Slightly lighter purple border */
-	}
+.box {
+	background: rgba(0, 0, 0, 0.5); /*#3da4cd;*/
+	box-shadow: inset 0px 0px 0px px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	padding: 2em;
+	border: 1px solid #624572; /* Slightly lighter purple border */
+}
 
 		.box.style1 {
 			padding: 3em 2em 3.5em 2em;
@@ -2109,14 +2122,14 @@ input, select, textarea {
 		.box h3 {
 			color: #E0E0E0;
 		}
-		
-		.box p {
-			color: #E0E0E0; /*#5f6466;*/
-			text-shadow: none;
-			/*text-shadow: .6px .6px 0px #000000;*/
-			font-family: 'Font Awesome 5 Brands';
-			font-size: 1.0em;
-		}
+
+	.box p {
+		color: #E0E0E0; /*#5f6466;*/
+		text-shadow: none;
+		/*text-shadow: .6px .6px 0px #000000;*/
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1.0em;
+	}
 
 /* Icons */
 
@@ -2224,11 +2237,17 @@ input, select, textarea {
 			font-size: 1.2rem;
 			margin: 10px 0;
 		}
-		
-		.bullet-points li {
-		  text-indent: -20px;
-		  padding-left: 20px;
-		}
+
+.bullet-points-wo-style li {
+	list-style: none;
+	text-indent: -20px;
+	padding-left: 20px;
+}
+
+.bullet-points li {
+	text-indent: -20px;
+	padding-left: 20px;
+}
 
 		.wrapper.style2 h1, .wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 p, .wrapper.style2 ul li {
 			line-height: 1.8; /* Increase line-height to improve readability */
@@ -2285,6 +2304,12 @@ input, select, textarea {
 				.wrapper.style4 form textarea:focus {
 					background: #252525;
 				}
+
+
+/* Add smooth transitions to elements */
+.wrapper, .row, h1, h2, p {
+	transition: all 0.4s ease;
+}
 
 /* Nav */
 
