@@ -23,7 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -245,11 +246,15 @@ h1, h2, h3, h4, h5, h6 {
 	.container {
 		margin: 0 auto;
 		max-width: calc(100% - 50px);
-		width: 1400px;
+		width: 1200px;
 	}
 
 		.container.medium {
 			width: 900px;
+		}
+				
+		.container.large {
+			width: 1400px;
 		}
 		
 		@media screen and (max-width: 3840px) {
@@ -260,6 +265,10 @@ h1, h2, h3, h4, h5, h6 {
 
 				.container.medium {
 					width: 1,293px;
+				}
+				
+				.container.large {
+					width: 100%;
 				}
 		}
 		
@@ -272,6 +281,10 @@ h1, h2, h3, h4, h5, h6 {
 				.container.medium {
 					width: 960px;
 				}
+				
+				.container.large {
+					width: 100%;
+				}
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -283,32 +296,49 @@ h1, h2, h3, h4, h5, h6 {
 				.container.medium {
 					width: 739px;
 				}
-
+				
+				.container.large {
+					width: 100%;
+				}
 		}
 
 		@media screen and (max-width: 980px) {
 			
 			.container {
 				width: 100%;
+				min-width: 797;
 			}
 
 				.container.medium {
 					width: 75%;
 				}
+				
+				.container.large {
+					width: 100%;
+				}
+		}
 
+		@media screen and (max-width: 796px) {
+
+			.container.large {
+				max-width: 554px;
+			}
 		}
 
 		@media screen and (max-width: 736px) {
 			
 			.container {
 				width: 100%;
-				max-width: calc(100% - 30px);
+				max-width: calc(100%-30px);
 			}
+				
+				.container.large {
+					width: 386px;
+				}
 
 				.container.medium {
 					width: 100%;
 				}
-
 		}
 
 
@@ -320,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
 		align-items: stretch;
 		position: relative;
 	}
-*/
+	
 		.row > * {
 			box-sizing: border-box;
 		}
@@ -1142,11 +1172,17 @@ h1, h2, h3, h4, h5, h6 {
 		
 				.row.center-middle > .col-6-medium:first-child {
 					text-align: right; /* Ensures the image aligns properly to the right */
-					/* margin-right: 20px; /* Add some space between the button and image */ */
+				}
+
+				.row.center-middle > .col-12-medium:first-child {
+					text-align: center; /* Ensures the image aligns properly to the right */
 				}
 
 				.row.center-middle > .col-6-medium:last-child {
 					text-align: left; /* Ensures the image aligns properly to the right */
+				}
+				.row.center-middle > .col-12-medium:last-child {
+					text-align: center; /* Ensures the image aligns properly to the right */
 				}
 
 				.row.aln-right {
@@ -1369,6 +1405,7 @@ h1, h2, h3, h4, h5, h6 {
 
 		}
 
+		/* was 736 */
 		@media screen and (max-width: 736px) {
 
 			.row {
@@ -1416,15 +1453,14 @@ h1, h2, h3, h4, h5, h6 {
 					height: auto; /* Maintain aspect ratio */
 					}
 				
-				.row.center-middle.col-12-small > :first-child,
-				.row.center-middle.col-12-small:first-child {
-					text-align: right; /* Ensures the image aligns properly to the right */
+				.row.center-middle > .col-12-small:first-child {
+					text-align: center; /* Ensures the image aligns properly to the right */
 					margin-right: 20px; /* Add some space between the button and image */
 				}
 
 				.row.center-middle > .col-12-small:last-child {
-					text-align: left; /* Ensures the image aligns properly to the right */
-					margin-left: 20px; /* Add some space between the button and image */
+					text-align: center; /* Ensures the image aligns properly to the right */
+					/* margin-left: 20px; /* Add some space between the button and image */
 				}
 
 				.row.aln-right {
@@ -1870,7 +1906,7 @@ section {
 		padding: 1em 2em;
 		font-size: 1.1em;
 		max-width: 24em;
-		margin-top: 140px;
+		margin-top: 6em;
 	}
 
 		input[type="button"]:hover,
@@ -1898,6 +1934,7 @@ section {
 		.button.large {
 			font-size: 1.5em;
 			letter-spacing: -0.025em;
+			vertical-align: center;
 		}
 
 		input[type="button"].alt,
@@ -2501,7 +2538,6 @@ section {
 /* Medium */
 
 	@media screen and (max-width: 980px) {
-
 		/* Articles */
 
 			#top {
@@ -2512,6 +2548,10 @@ section {
 				#top .image {
 					margin: 0 auto 2em auto;
 				}
+
+			body {
+				line-height: 3em;
+			}
 
 	}
 
@@ -2734,5 +2774,11 @@ section {
 			.responsive-video {
 				width: 400px; /* col-12-small */
 				height: calc(400px * 9 / 16); /* Maintain 16:9 aspect ratio */
+			}
+
+		/* image */
+			.image.responsive {
+				width: auto;
+				height: auto;
 			}
 	}
