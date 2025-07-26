@@ -1,0 +1,70 @@
+export default function Portfolio() {
+  return (
+    <main className="max-w-5xl mx-auto px-4 py-12 space-y-12">
+      <section className="text-center">
+        <h1 className="text-4xl font-bold">Robert Mitchell</h1>
+        <p className="text-xl mt-2">Technical Animator | Gameplay Engineer | Unreal Engine Specialist</p>
+        <div className="mt-4 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/Rob_Mitchell_Resume_ATS_Final_Cleaned.docx" className="underline text-blue-600">Download Resume</a>
+          <a href="https://www.linkedin.com/in/your-link" className="underline text-blue-600">LinkedIn</a>
+          <a href="https://github.com/your-github" className="underline text-blue-600">GitHub</a>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Animation Reel</h2>
+        <div className="aspect-w-16 aspect-h-9">
+          <iframe
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            title="Animation Reel"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          ></iframe>
+        </div>
+        <ul className="mt-2 text-sm text-gray-600">
+          <li>0:10 – Motion matching transition demo (UE5)</li>
+          <li>0:20 – Maya rigging & weight painting</li>
+          <li>0:35 – Combat system with animation syncing and root motion</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Featured Projects</h2>
+
+        <div className="space-y-8">
+          <div>
+            <h3 className="text-xl font-bold">ARPG Combat System (Unreal Engine 5)</h3>
+            <p className="mt-2">Developed a dynamic combat system using UE5 GAS. Built animation blueprint graphs, montages, and synced root motion with predictive transitions and motion matching.</p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold">Rigging & Animation Tools (Maya + Unreal)</h3>
+            <p className="mt-2">Performed basic joint placement, skin binding, and painted weights for prototype characters. Integrated notifies, sockets, and animation layers in Unreal Engine.</p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold">Virtual Patient (Unity3D, ArchieMD)</h3>
+            <p className="mt-2">Led Unity3D project simulating medical procedures. Used dynamic animation and behavior systems to simulate patient reactions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Technical Skills</h2>
+        <ul className="list-disc list-inside">
+          <li>Control Rig, Animation Blueprint, Motion Matching, Retargeting</li>
+          <li>Unreal Engine 4/5, Unity3D, Maya (basic rigging)</li>
+          <li>C++, C#, Python (basic)</li>
+          <li>CI/CD, Git, Jenkins, Perforce</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Contact</h2>
+        <p>Email: <a href="mailto:robm4017@gmail.com" className="text-blue-600 underline">robm4017@gmail.com</a></p>
+      </section>
+    </main>
+  );
+}
